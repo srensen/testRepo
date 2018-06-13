@@ -1,0 +1,45 @@
+FORMAT: 1A
+HOST: http://saferhome.api/
+
+# Demo - User Information
+
+This API retrieves family information.
+
+## Retrieve Family Information [/demo/v1/user/{userid}/family]
+
+### Retrieve Family Information [GET]
+
++ Parameter                                                                                                    
+                                                                                                        
+    + userid: 1
+
++ Request                                                                                                    
+                                                                                                    
+    + Header                                                                                                    
+    
+            AppKey: dumby-key-123                                                                                                        
+            Authorization: Bearer abcdefg12345678910   
+            baggage-UUID: 1234567890abcdefghijklmnopqrstuvwxyz 
+            baggage-SESSIONID: abcdefghijklmnopqrstuvwxyz1234567890
+            baggage-USERID:1
+                                                                                                    
++ Response 200 (application/json;charset=UTF-8)                                                                                                    
+                                                                                                    
+        [                                                                                                    
+            {                                                                                                    
+                "familyNumber": "GB1234",                                                                                                    
+                "firstName": "Alex",                                                                                                    
+                "birthMonth": "04",                                                                                                    
+                "birthYear": "2015",                                                                                                    
+                "ageGroup": "1-3 years",                                                                                                    
+                "gender": "male"                                                                                                    
+            }, 
+            {                                                                                                    
+                "familyNumber": "GB4321",                                                                                                    
+                "firstName": "Sarah",                                                                                                    
+                "birthMonth": "04",                                                                                                    
+                "birthYear": "2017",                                                                                                    
+                "ageGroup": "0-5 months",                                                                                                    
+                "gender": "female"                                                                                                    
+            }                                                                                                    
+        ]
